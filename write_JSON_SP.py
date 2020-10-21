@@ -12,6 +12,7 @@ import ase
 import ase.io
 from ase import Atoms
 import os
+import shutil
 
 p=os.listdir(r'D:\Lab\SNAP\EOS_1T_Top_Mo\SNAP')
 
@@ -131,5 +132,6 @@ for i in p:
     
         f.write('}')
         f.write('}')
-    
+        
+    shutil.copy2('MoS2_1T_{}.json'.format(i), 'D:\Lab\SNAP\EOS_1T_Top_Mo\JSON')
     os.chdir("D:\Lab\SNAP\EOS_1T_Top_Mo\SNAP")
